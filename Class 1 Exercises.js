@@ -78,13 +78,17 @@ console.log(`Extracted First Name: ${extractedName}`)
 // Establishes date variables
 const startDate = new Date(2020, 0, 1)
 const endDate = new Date(2020, 3, 1)
+
 console.log(startDate.getTime()) // 1577865600000
 console.log(endDate.getTime())   // 1585724400000
+
 const dateFormula = (startDate.getTime() + endDate.getTime()) / 2
 console.log(dateFormula) // 1581795000000 | I need to convert this into (year/month/day) format
 const middleDate = new Date(dateFormula)
+
 // following lines of code break down milliseconds into (year/month/day) format
 const middleYear = middleDate.getFullYear()
 const middleMonth = middleDate.getMonth() + 1 // +1 to account for index starting at zero
 const middleDay = middleDate.getDay()
+
 console.log(`Middle Date: ${middleYear} ${middleMonth} ${middleDay}`)
